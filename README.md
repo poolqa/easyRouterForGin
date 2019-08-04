@@ -1,3 +1,6 @@
+# 推薦使用gin-swagger
+https://github.com/swaggo/gin-swagger
+
 # easyRouterForGin
 
 1. 簡化gin router配置，使層級清晰
