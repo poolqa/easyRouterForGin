@@ -70,6 +70,8 @@ func SetRoutersToGinRouter(engine gin.IRouter, iRouters ...RouterInterFace) erro
 			methods := router.GetMethods()
 			if len(methods) >= 7 {
 				engine.Any(router.GetRelativePath(), router.GetHandlers()...)
+			} else if strings.ToUpper(methods[0]) == "ANY" {
+				engine.Any(router.GetRelativePath(), router.GetHandlers()...)
 			} else {
 				for _, method := range methods {
 					switch strings.ToUpper(method) {
